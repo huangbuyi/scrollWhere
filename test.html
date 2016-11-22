@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="parent" style="width:100%;height:300px;margin-bottom:1000px;overflow: auto">
+    <div style="width:100%;height:1000px"></div>
+</div>
+<div style="width:100%;height:1000px"></div>
+
+<script src="scrollwhere.js"></script>
+<script>
+    var sParent = new scrollWhere({
+        elem: ".parent",
+        distance: 10,
+        delay:{
+            default:250,
+            leaveTop: 300,
+            reachTop:100
+        },
+        //resize:true,
+        leaveTop: function(){
+            console.log("options leave top");
+        },
+        reachTop: function(){
+            console.log("options reachTop top");
+        },
+        leaveBottom: function(){
+            console.log("options leave Bottom");
+        },
+        reachBottom: function(){
+            console.log("options reach Bottom");
+        }
+    });
+
+    sParent.on( "reachBottom", function(){
+        console.log("on reachBottom");
+    } ).on("reachTop" ,function(){
+        console.log("on reachTop");
+    }).on("leaveBottom" ,function(){
+        console.log("on leaveBottom");
+    }).on("leaveTop" ,function(){
+        console.log("on leaveTop");
+    });
+    document.querySelector( ".parent" ).addEventListener( "scroll", function(){
+        //console.log( s.scrollBottom );
+    } )
+</script>
+</body>
+</html>
