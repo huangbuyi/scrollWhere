@@ -1,7 +1,7 @@
 // todo window滚动窗口不支持computedStyle方法，使用替代方法计算高度，然后将window设为默认elem选项
 // todo 其它配置 resize x轴滚动
 // todo 方法scrolltop scrollbottom scrollposition(pos, fn)滚动到指定位置触发 isScrollElement滚动到指定元素触发
-
+// todo 压缩混淆，测试amd、commonjs、jquery条件
 // 事件 滚动到顶部，滚动到底部，滚动到中间，滚动指定距离，滚动到指定元素
 // 方法 滚动到顶部 滚动到底部 滚动到中间，滚动指定距离，滚动到指定位置，滚动到指定元素
 
